@@ -1,0 +1,108 @@
+@import "Helpers";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.nav-button {
+    @include hover;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.signin-btn {
+  @include hover;
+  border: $button-border;
+}
+
+.greetings-section {
+  background: url("images/startup1.jpeg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  box-shadow: $bg-darker;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 3em;
+}
+
+.actions {
+  padding-left: 20px;
+}
+
+.action {
+  @include hover;
+  font-size: 1.4em;
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.section-header {
+  color: #fff;
+  padding-top: 70px;
+  h2 {
+    font-size: 2.5em;
+    color: #666;
+  }
+}
+
+.card-deck {
+  padding-top: 50px;
+  .card {
+    transition: all 0.4s;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    &:hover {
+      transform: scale(1.06, 1.06);
+    }
+  }
+}
+
+.card-header {
+  background: url("images/startup1.jpeg") center;
+  background-size: cover;
+  height: 200px;
+}
+
+.card-img-top {
+  height: 200px;
+
+}
+
+.detail-btn {
+  @include hover;
+  border: $button-border;
+}
+
+.add-project_btn {
+  @include hover;
+  border: $button-border;
+}
+
+.look-all {
+  @include hover;
+  border: $button-border;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card-link {
+  color: #333;
+  &:hover {
+    text-decoration: none;
+    color: #333;
+  }
+}

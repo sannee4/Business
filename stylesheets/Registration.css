@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.nav-button {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .nav-button:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.btn:focus {
+  box-shadow: none; }
+
+a:focus {
+  text-decoration: none;
+  outline: none; }
+a:hover {
+  text-decoration: none; }
+
+.forms-container {
+  background: #fff;
+  height: 55vh;
+  width: 25vw;
+  z-index: 2;
+  border-radius: 20px;
+  text-align: center; }
+
+.wrapper {
+  background: url("images/startup1.jpeg") center;
+  background-size: auto;
+  box-shadow: 100px 100px 100px 100vw rgba(0, 0, 0, 0.4) inset;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.signup-btn {
+  border: 3px solid #5a6268;
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .signup-btn:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.signin-btn {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .signin-btn:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+/*# sourceMappingURL=Registration.css.map */

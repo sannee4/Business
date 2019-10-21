@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/Registration.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="MainPage.html">Название</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="#">
+                    <button class="btn nav-button">Вакансии</button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#">
+                    <button class="btn nav-button">Стартапы</button>
+                </a>
+            </li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn my-2 my-sm-2 nav-button auth-button_signin" data-toggle="modal"
+                    data-target="#signin-modal" type="submit">Вход
+            </button>
+
+            <a href="Registration.html">
+                <button class="btn my-2 my-sm-2 nav-button auth-button_signup" type="submit">Регистрация</button>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<section class="wrapper-section">
+    <div class="container-fluid ml-auto my-auto wrapper">
+        <div class="forms-container ">
+            <h1>Регистрация</h1>
+
+            <div class="container">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"
+                                                                            aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Имя" aria-label="name"
+                           aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2"><i class="fa fa-user"
+                                                                            aria-hidden="true"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Фамилия" aria-label="surname"
+                           aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3"><i class="fa fa-user"
+                                                                            aria-hidden="true"></i></span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Телефон" aria-label="phone"
+                           aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Я </label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected value="1">Стартапер</option>
+                        <option value="2">Инвестор</option>
+                        <option value="3">Разработчик</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon4">@</span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp"
+                           aria-label="Email"
+                           aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon5"><i class="fa fa-lock"
+                                                                            aria-hidden="true"></i></span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Пароль" aria-label="Password"
+                           aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon6"><i class="fa fa-lock"
+                                                                            aria-hidden="true"></i></span>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Повторите пароль"
+                           aria-label="password confirm" aria-describedby="basic-addon1">
+                </div>
+                <button class="btn btn-lg signup-btn">Регистрация</button>
+                <a href="#signin-modal" data-toggle="modal">У меня уже есть профиль</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="signin-modal_label"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Вход</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon7">@</span>
+                        </div>
+                        <input type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp"
+                               aria-label="Email"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon8">
+                                <i class="fa fa-lock" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Пароль" aria-label="Password"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="mr-auto">
+                        <input type="checkbox" aria-label="Checkbox for following text input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">
+                            Запомнить меня
+                        </label>
+                    </div>
+                    <div class="ml-auto">
+                        <a href="#">Не помню пароль</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-md signin-btn">Войти</button>
+                <a href="Registration.html.html">Создать профиль</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/e63e3b96a5.js"></script>
+</body>
+</html>
