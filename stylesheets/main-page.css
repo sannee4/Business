@@ -130,4 +130,30 @@ body {
     text-decoration: none;
     color: #333; }
 
+.more-info_btn {
+  border: 3px solid #5a6268;
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s; }
+  .more-info_btn:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.date {
+  color: #888; }
+
+.bg-image {
+  background: url("images/startup1.jpeg") center;
+  background-size: cover;
+  height: 300px; }
+
+.events {
+  margin-bottom: 50px; }
+
+.event {
+  margin-top: 50px; }
+
 /*# sourceMappingURL=main-page.css.map */

@@ -106,3 +106,26 @@ body {
     color: #333;
   }
 }
+
+.more-info_btn {
+  border: $button-border;
+  @include hover;
+}
+
+.date {
+  color: #888;
+}
+
+.bg-image {
+  background: url("images/startup1.jpeg") center;
+  background-size: cover;
+  height: 300px;
+}
+
+.events {
+  margin-bottom: 50px;
+}
+
+.event {
+  margin-top: 50px;
+}
