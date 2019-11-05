@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+$button-border: 3px solid #5a6268;
+$bg-darker: 100px 100px 100px 100vw rgba(0, 0, 0, 0.4) inset;
+$mainFont: 'Montserrat', sans-serif;
+
+body {
+  font-family: $mainFont;
+}
+
 @mixin hover {
   color: #333;
   -webkit-transition: all 0.4s;
@@ -42,6 +52,11 @@
   }
 }
 
-$button-border: 3px solid #5a6268;
-
-$bg-darker: 100px 100px 100px 100vw rgba(0, 0, 0, 0.4) inset;
+@mixin section-header {
+  color: #fff;
+  padding-top: 70px;
+  h2 {
+    font-size: 2.5em;
+    color: #666;
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,8EAAsE;AAM9E,IAAK;EACH,WAAW,EAHF,wBAAwB;;ACFnC,kBAAmB;EACjB,aAAa,EAAE,IAAI;;AAGrB,UAAW;EACT,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,KAAK;;AAGnB,cAAe;EACb,MAAM,EAAE,IAAI",
+"sources": ["Helpers.scss","StartupDetail.scss"],
+"names": [],
+"file": "StartupDetail.css"
+}

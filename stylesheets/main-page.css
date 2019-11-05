@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif; }
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff; }
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif; }
 
 .nav-button {
   color: #333;
@@ -150,10 +155,7 @@ body {
   background-size: cover;
   height: 300px; }
 
-.events {
-  margin-bottom: 50px; }
-
-.event {
-  margin-top: 50px; }
+.carousel-inner {
+  border: 3px solid #5a6268; }
 
 /*# sourceMappingURL=main-page.css.map */

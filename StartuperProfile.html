@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/StartuperProfile.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Название</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-2">
+            <li class="nav-item">
+                <a href="#jobs">
+                    <button class="btn nav-button">Вакансии</button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#startups">
+                    <button class="btn nav-button">Стартапы</button>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle nav-button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        Имя Фамилия
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">Профиль</button>
+                        <button class="dropdown-item" type="button">Добавить (стартап/инвестиционный проект/резюме)
+                        </button>
+                        <button class="dropdown-item" type="button">Выход</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="user-info container">
+        <h2>Amir Mardanov</h2>
+        <h4>Россия, Республика Татарстан</h4>
+        <div class="info">
+            <h5>79991553468</h5>
+            <h5>mail@mail.ru</h5>
+        </div>
+        <button class="btn btn-sm edit-profile_btn">Редактровать профиль</button>
+    </div>
+
+    <div class="projects">
+        <div class="container">
+            <div class="row section-header">
+                <div class="col-sm-4">
+                    <h2 class="h2">Мои проекты</h2>
+                </div>
+                <div class="ml-auto">
+                    <button class="btn add-project">Добавить проект</button>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Название</th>
+                <th scope="col">Категория</th>
+                <th scope="col">Описание</th>
+                <th class="text-center" scope="col">Сотрудников</th>
+                <th scope="col">Статус реализации</th>
+                <th scope="col">Нужна поддержка</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td class="project-name"><a href="StartupDetail.html">Название 1</a></td>
+                <td>Категория 1</td>
+                <td>Описание 1</td>
+                <td class="text-center">3</td>
+                <td>В разработке</td>
+                <td>Нет</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td class="project-name"><a href="#">Название 2</a></td>
+                <td>Категория 2</td>
+                <td>Описание 2</td>
+                <td class="text-center">6</td>
+                <td>Готово</td>
+                <td>Да (финансы)</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td class="project-name"><a href="#">Название 3</a></td>
+                <td>Категория 3</td>
+                <td>Описание 3</td>
+                <td class="text-center">10</td>
+                <td>Есть идея</td>
+                <td>Да (люди)</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/e63e3b96a5.js"></script>
+
+</body>
+</html>

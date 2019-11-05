@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Название стартапа</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/StartupDetail.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Название</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-2">
+            <li class="nav-item">
+                <a href="#jobs">
+                    <button class="btn nav-button">Вакансии</button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#startups">
+                    <button class="btn nav-button">Стартапы</button>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle nav-button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        Имя Фамилия
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="StartuperProfile.html">
+                            <button class="dropdown-item" type="button">Профиль</button>
+                        </a>
+                        <button class="dropdown-item" type="button">Добавить (стартап/инвестиционный проект/резюме)
+                        </button>
+                        <button class="dropdown-item" type="button">Выход</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="user-info container">
+        <h2><u>Название стартапа</u></h2>
+        <h4>Категория: безопасность</h4>
+        <div class="info">
+            <h5>Презентация: (Тут должен быть файл)</h5>
+            <h5>Контактная информация: mail@mail.ru</h5>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4 col-8">
+                <select class="form-control" id="ready-status">
+                    <option>Есть идея</option>
+                    <option>В разработке</option>
+                    <option>В процессе завершения разработки</option>
+                    <option>Завершено</option>
+                </select>
+            </div>
+            <div class="col-md-4 col-4">
+                <button class="btn btn-success">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="investment-offers">
+        <div class="container">
+            <div class="row section-header">
+                <div class="col-sm-8">
+                    <h2 class="h2">Заявки на сотрудничество</h2>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <a href="#investor-info1" class="list-group-item list-group-item-action" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="investor-info1">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">ФИО инвестора: </h5>
+                    <small class="ml-auto">3 дня назад</small>
+                </div>
+                <h5 class="mb-1">Сумма: 1000000$</h5>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="investor-info1">
+                        <div class="card card-body">
+                            <h6>Email: mardanovamir0@gmail.com</h6>
+                            <h6>Телефон: 79991553468</h6>
+                            <p>
+                                <button class="btn btn-sm btn-success">Принять</button>
+                                <button class="btn btn-sm btn-danger">Отклонить</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#investor-info2" class="list-group-item list-group-item-action" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="investor-info2">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">ФИО инвестора: </h5>
+                    <small class="ml-auto">3 дня назад</small>
+                </div>
+                <h5 class="mb-1">Сумма: </h5>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="investor-info2">
+                        <div class="card card-body">
+                            <h6>Email: mardanovamir0@gmail.com</h6>
+                            <h6>Телефон: 79991553468</h6>
+                            <p>
+                                <button class="btn btn-sm btn-success">Принять</button>
+                                <button class="btn btn-sm btn-danger">Отклонить</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#investor-info3" class="list-group-item list-group-item-action" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="investor-info3">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">ФИО инвестора: </h5>
+                    <small class="ml-auto">3 дня назад</small>
+                </div>
+                <h5 class="mb-1">Сумма: </h5>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="investor-info3">
+                        <div class="card card-body">
+                            <h6>Email: mardanovamir0@gmail.com</h6>
+                            <h6>Телефон: 79991553468</h6>
+                            <p>
+                                <button class="btn btn-sm btn-success">Принять</button>
+                                <button class="btn btn-sm btn-danger">Отклонить</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="accepted-investments">
+        <div class="container">
+            <div class="row section-header">
+                <div class="col-sm-8">
+                    <h2 class="h2">Полученные инвестиции</h2>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <a href="#investor-info4" class="list-group-item list-group-item-action" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="investor-info1">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">ФИО инвестора: </h5>
+                    <small class="ml-auto">3 дня назад</small>
+                </div>
+                <h5 class="mb-1">Сумма: 1000000$</h5>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="investor-info4">
+                        <div class="card card-body">
+                            <h6>Email: mardanovamir0@gmail.com</h6>
+                            <h6>Телефон: 79991553468</h6>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/e63e3b96a5.js"></script>
+</body>
+</html>

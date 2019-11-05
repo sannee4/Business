@@ -1,9 +1,12 @@
 @import "Helpers";
 
+
 body {
   margin: 0;
   padding: 0;
   background-color: #fff;
+  font-family: $mainFont;
+
 }
 
 .nav-button {
@@ -122,10 +125,6 @@ body {
   height: 300px;
 }
 
-.events {
-  margin-bottom: 50px;
-}
-
-.event {
-  margin-top: 50px;
+.carousel-inner {
+  border: $button-border;
 }
