@@ -1,6 +1,6 @@
 @import "Helpers";
 
-.investment-offers {
+.help-offers {
   margin-bottom: 50px;
 }
 
@@ -12,4 +12,22 @@
 
 .help-requests {
   height: 20vh;
+}
+
+.add-offer {
+  @include hover;
+  border: $button-border;
+}
+
+.competitors {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.competitor, .help-offer {
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.05, 1.05);
+    border-radius: 10px;
+  }
 }

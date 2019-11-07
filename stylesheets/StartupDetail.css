@@ -2,7 +2,7 @@
 body {
   font-family: "Montserrat", sans-serif; }
 
-.investment-offers {
+.help-offers {
   margin-bottom: 50px; }
 
 .user-info {
@@ -12,5 +12,27 @@ body {
 
 .help-requests {
   height: 20vh; }
+
+.add-offer {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .add-offer:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.competitors {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+
+.competitor, .help-offer {
+  transition: all 0.5s; }
+  .competitor:hover, .help-offer:hover {
+    transform: scale(1.05, 1.05);
+    border-radius: 10px; }
 
 /*# sourceMappingURL=StartupDetail.css.map */

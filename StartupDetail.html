@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="investment-offers">
+    <div class="help-offers">
         <div class="container">
             <div class="row section-header">
                 <div class="col-sm-8">
@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="list-group">
-            <a href="#investor-info1" class="list-group-item list-group-item-action" data-toggle="collapse"
+            <a href="#investor-info1" class="list-group-item list-group-item-action help-offer" data-toggle="collapse"
                role="button" aria-expanded="false" aria-controls="investor-info1">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">ФИО инвестора: </h5>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#investor-info2" class="list-group-item list-group-item-action" data-toggle="collapse"
+            <a href="#investor-info2" class="list-group-item list-group-item-action help-offer" data-toggle="collapse"
                role="button" aria-expanded="false" aria-controls="investor-info2">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">ФИО инвестора: </h5>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#investor-info3" class="list-group-item list-group-item-action" data-toggle="collapse"
+            <a href="#investor-info3" class="list-group-item list-group-item-action help-offer" data-toggle="collapse"
                role="button" aria-expanded="false" aria-controls="investor-info3">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">ФИО инвестора: </h5>
@@ -142,34 +142,133 @@
         </div>
     </div>
 
-    <div class="accepted-investments">
+    <div class="help-requests">
+        <div class="container">
+            <div class="row section-header">
+                <div class="col-sm-6">
+                    <h2 class="h2">Мои запросы помощи</h2>
+                </div>
+                <div class="ml-auto">
+                    <button class="btn add-offer" type="button" data-toggle="modal" data-target="#newRequestModal">
+                        Добавить просьбу
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Тип</th>
+                <th scope="col">Количество</th>
+                <th scope="col">Статус</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Материальная 1</td>
+                <td>Категория 1</td>
+                <td>Актуально</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td class="project-name"><a href="#">Название 2</a></td>
+                <td>Категория 2</td>
+                <td>Актуально</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td class="project-name"><a href="#">Название 3</a></td>
+                <td>Категория 3</td>
+                <td>Неактуально</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="competitors">
         <div class="container">
             <div class="row section-header">
                 <div class="col-sm-8">
-                    <h2 class="h2">Полученные инвестиции</h2>
+                    <h2 class="h2">Мои конкуренты</h2>
                 </div>
             </div>
         </div>
         <div class="list-group">
-            <a href="#investor-info4" class="list-group-item list-group-item-action" data-toggle="collapse"
-               role="button" aria-expanded="false" aria-controls="investor-info1">
+            <a href="#competitor-info1" class="list-group-item list-group-item-action competitor" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="competitor-info1">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">ФИО инвестора: </h5>
-                    <small class="ml-auto">3 дня назад</small>
+                    <h5 class="mb-1">Название стартапа</h5>
                 </div>
-                <h5 class="mb-1">Сумма: 1000000$</h5>
-                <div class="col">
-                    <div class="collapse multi-collapse" id="investor-info4">
-                        <div class="card card-body">
-                            <h6>Email: mardanovamir0@gmail.com</h6>
-                            <h6>Телефон: 79991553468</h6>
-                        </div>
-                    </div>
+                <h6 class="mb-1">Паспорт проекта </h6>
+            </a>
+            <a href="#competitor-info2" class="list-group-item list-group-item-action competitor" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="competitor-info2">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Название стартапа</h5>
                 </div>
+                <h6 class="mb-1">Паспорт проекта </h6>
+            </a>
+            <a href="#competitor-info3" class="list-group-item list-group-item-action competitor" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="competitor-info3">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Название стартапа</h5>
+                </div>
+                <h6 class="mb-1">Паспорт проекта </h6>
             </a>
         </div>
     </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newRequestModal" tabindex="-1" role="dialog" aria-labelledby="newRequestModal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newRequestModalTitle">Новая просьба о помощи</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="inputState" class="mr-2">Мне нужно</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Финансы</option>
+                                <option>Рабочая сила</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="countInput" class="mr-2">Размер</label>
+                            <input type="text" class="form-control" id="countInput" placeholder="Размер инвестиций">
+                            <select name="currency" id="currencySelect" class="form-control">
+                                <option>$</option>
+                                <option>₽</option>
+                                <option>&#8364</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Опишите требования к кандидату</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-success">Добавить</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
