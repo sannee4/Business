@@ -9,7 +9,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="#">Название</a>
+    <a class="navbar-brand" href="MainPage.html">Название</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -187,11 +187,70 @@
         </table>
     </div>
 
+    <div class="accepted-investments">
+        <div class="container">
+            <div class="row section-header">
+                <div class="mr-auto">
+                    <h3>Полученные инвестиции</h3>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-group-item contest">
+                <div class="d-flex w-100 justify-content-between">
+                    <a href="InvestorPage.html"><h5 class="mb-1">ФИО инвестора / название компании</h5></a>
+                    <small>Дата</small>
+                </div>
+                <b><h4 class="mb-1">Сумма </h4></b>
+            </div>
+        </div>
+    </div>
+
+    <div class="contests">
+        <div class="container">
+            <div class="row section-header">
+                <div class="mr-auto">
+                    <h3>Конкурсы на получение инвестиций</h3>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-group-item contest">
+                <div class="d-flex w-100 justify-content-between">
+                    <a href="InvestorPage.html"><h5 class="mb-1">ФИО инвестора / название компании</h5></a>
+                    <small>Дата публикации</small>
+                </div>
+                <h6 class="mb-1">Сумма </h6>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#detailModal">
+                    Подробнее
+                </button>
+                <button class="btn btn-success btn-sm">Отправить заявку</button>
+            </div>
+            <a href="#contest-info2" class="list-group-item list-group-item-action contest" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="contest-info2">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Название стартапа</h5>
+                </div>
+                <h6 class="mb-1">Паспорт проекта </h6>
+            </a>
+            <a href="#contest-info3" class="list-group-item list-group-item-action contest" data-toggle="collapse"
+               role="button" aria-expanded="false" aria-controls="contest-info3">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Название стартапа</h5>
+                </div>
+                <h6 class="mb-1">Паспорт проекта </h6>
+            </a>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-lg look-all">Смотреть все</button>
+        </div>
+    </div>
+
     <div class="competitors">
         <div class="container">
             <div class="row section-header">
                 <div class="col-sm-8">
-                    <h2 class="h2">Мои конкуренты</h2>
+                    <h2 class="h2">Конкуренты</h2>
                 </div>
             </div>
         </div>
@@ -222,7 +281,7 @@
 
 </div>
 
-<!-- Modal -->
+<!-- Modal new Request -->
 <div class="modal fade" id="newRequestModal" tabindex="-1" role="dialog" aria-labelledby="newRequestModal"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -266,6 +325,46 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
                 <button type="button" class="btn btn-success">Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal detail -->
+<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalTitle"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailModalTitle">Отправить заявку на конкурс</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h4><a href="InvestorPage.html">Организатор</a></h4>
+                <h3><u>Описание:</u></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet blanditiis expedita officiis porro
+                    possimus quam quos reiciendis rem, reprehenderit similique sint tenetur vel voluptas voluptates
+                    voluptatum. Adipisci asperiores cumque cupiditate magnam odit, provident sed. Autem, culpa
+                    cupiditate ducimus fugit in nihil nulla reprehenderit tempora. Aliquid ipsam libero natus! Animi
+                    assumenda at, autem cum, error fugiat iusto laudantium nam nemo, porro provident qui sed voluptate!
+                    Accusamus animi autem facere nulla odio praesentium sapiente tempora tempore. Ad, aliquam amet at
+                    aut consequuntur cupiditate deserunt dolor dolorum, earum exercitationem iusto minus nam natus neque
+                    porro quaerat quam, quia reiciendis sit temporibus! Amet at cumque distinctio ducimus earum eligendi
+                    eveniet facere fuga incidunt inventore ipsa ipsum laboriosam minus necessitatibus nesciunt nobis
+                    officia, pariatur perspiciatis, quae, quam quas qui quia recusandae sed suscipit unde voluptas
+                    voluptatum. Accusantium ad, aliquam animi aperiam asperiores delectus dolore doloribus saepe sed
+                    sequi. Eligendi expedita quis sunt? Adipisci animi aut commodi consequatur delectus dolor et
+                    excepturi fugiat harum illo incidunt ipsa maxime mollitia nam nemo nesciunt non nulla placeat
+                    possimus quam quo soluta, voluptas voluptatem! A, accusamus debitis dolores ducimus eos
+                    exercitationem expedita fugit magnam maiores nam, nesciunt nostrum officiis pariatur placeat quasi
+                    quidem, quis recusandae unde vel veritatis voluptatem.</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline-success">Save changes</button>
             </div>
         </div>
     </div>

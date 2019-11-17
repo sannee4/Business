@@ -1,12 +1,7 @@
 @import "Helpers";
 
-.help-offers {
-  margin-bottom: 50px;
-}
-
 .user-info {
   color: #000;
-  height: 20vh;
   margin-top: 100px;
 }
 
@@ -20,7 +15,6 @@
 }
 
 .competitors {
-  margin-top: 60px;
   margin-bottom: 60px;
 }
 
@@ -30,4 +24,53 @@
     transform: scale(1.05, 1.05);
     border-radius: 10px;
   }
+}
+
+.section-header {
+  color: #fff;
+  padding-top: 70px;
+  h2 {
+    font-size: 2.5em;
+    color: #666;
+  }
+  h3 {
+    color: #666;
+  }
+}
+
+.card-deck {
+  padding-top: 30px;
+  .card {
+    transition: all 0.4s;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    &:hover {
+      transform: scale(1.05, 1.05);
+    }
+    &-header {
+      background: url("images/startup1.jpeg") center;
+      background-size: cover;
+      height: 200px;
+    }
+    &-img-top {
+      height: 200px;
+    }
+    &-link {
+      color: #333;
+      &:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+}
+
+.accepted-investments {
+  margin-top: 60px;
+}
+
+.look-all {
+  margin-top: 20px;
+  @include hover;
+  border: $button-border;
 }
