@@ -44,7 +44,6 @@
     <div class="container-fluid ml-auto my-auto wrapper">
         <div class="forms-container ">
             <h1>Регистрация</h1>
-
             <div class="container">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -86,28 +85,30 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon4">@</span>
                     </div>
-                    <input type="email" class="form-control" placeholder="Email" aria-describedby="emailHelp"
+                    <input type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp"
                            aria-label="Email"
                            aria-describedby="basic-addon1">
                 </div>
+                <div id="mailErr" style="display: none;padding: 5px;  color:red;"> Неправильный формат почты</div>
 
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon5"><i class="fa fa-lock"
-                                                                            aria-hidden="true"></i></span>
+                        <span class="input-group-text" id="basic-addon5"><i class="fa fa-lock" aria-hidden="true"></i></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Пароль" aria-label="Password"
+                    <input type="password" class="form-control" id="password" placeholder="Пароль" aria-label="Password"
                            aria-describedby="basic-addon1">
                 </div>
+                <div id="passErr" style="display: none;padding: 5px; color:red;"> Пароль должен состоять из букв латинского алфавита,
+                    содержать хотя-бы одно число и быть длинной больше 6 символов</div>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon6"><i class="fa fa-lock"
-                                                                            aria-hidden="true"></i></span>
+                        <span class="input-group-text" id="basic-addon6"><i class="fa fa-lock" aria-hidden="true"></i></span>
                     </div>
-                    <input type="password" class="form-control" placeholder="Повторите пароль"
-                           aria-label="password confirm" aria-describedby="basic-addon1">
+                    <input type="password" class="form-control" id="passwordConfirm" placeholder="Повторите пароль" aria-label="password confirm"
+                           aria-describedby="basic-addon1">
                 </div>
-                <button class="btn btn-lg signup-btn">Регистрация</button>
+                <span id="passwordError"></span>
+                <button class="btn btn-lg signup-btn" id="register" type="submit">Регистрация</button>
                 <a href="#signin-modal" data-toggle="modal">У меня уже есть профиль</a>
             </div>
         </div>
@@ -168,6 +169,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+<script src="js/Registration.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/e63e3b96a5.js"></script>
 </body>

@@ -282,14 +282,15 @@
                 <form>
                     <div class="form-group">
                         <div class="form-inline">
-                            <label for="inputState" class="mr-2">Мне нужно</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Финансы</option>
+                            <label for="helpKind" class="mr-2">Мне нужно</label>
+                            <select id="helpKind" class="form-control">
+                                <option>Выберите</option>
                                 <option>Рабочая сила</option>
+                                <option>Финансы</option>
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="investmentSize">
                         <div class="form-inline">
                             <label for="countInput" class="mr-2">Размер</label>
                             <input type="text" class="form-control" id="countInput" placeholder="Размер инвестиций">
@@ -300,12 +301,10 @@
                             </select>
                         </div>
                     </div>
-
-                    <div class="form-group">
+                    <div class="form-group" id="requirements">
                         <label for="exampleFormControlTextarea1">Опишите требования к кандидату</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-
                 </form>
             </div>
             <div class="modal-footer">
@@ -316,9 +315,11 @@
     </div>
 </div>
 
+
+
 <!-- Modal detail -->
 <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalTitle"
-           aria-hidden="true">
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -364,5 +365,8 @@
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/e63e3b96a5.js"></script>
+
+<script src="js/StartupDetail.js"></script>
+
 </body>
 </html>

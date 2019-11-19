@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Личный кабинет</title>
-
+    <title>Amir Mardanov</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="stylesheets/StartuperProfile.css">
 </head>
@@ -49,7 +48,7 @@
 <div class="container">
 
     <div class="user-info container">
-        <h2>Amir Mardanov</h2>
+        <h2 id="username">Amir Mardanov</h2>
         <h4>Россия, Республика Татарстан</h4>
         <div class="info">
             <h5>79991553468</h5>
@@ -65,7 +64,9 @@
                     <h2 class="h2">Мои проекты</h2>
                 </div>
                 <div class="ml-auto">
-                    <button class="btn add-project">Добавить проект</button>
+                    <button class="btn add-project" type="button" data-toggle="modal" data-target="#newProject">Добавить
+                        проект
+                    </button>
                 </div>
             </div>
         </div>
@@ -114,6 +115,112 @@
     </div>
 </div>
 
+<div class="modal fade" id="newProject" tabindex="-1" role="dialog" aria-labelledby="newProject"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newProjectTitle">Новая просьба о помощи</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="projectName" class="mr-2">Название</label>
+                            <input type="text" class="form-control" id="projectName" placeholder="Super startup"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="categorySelect" class="mr-2">Категория</label>
+                            <select name="category" id="categorySelect" class="form-control">
+                                <option>Выберите</option>
+                                <option>Блокчейн</option>
+                                <option>ИИ</option>
+                                <option>Компьютерное зрение</option>
+                                <option>Транспорт</option>
+                                <option>Медиицина</option>
+                                <option>Улучшение жизни</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="employeesCountSelect" class="mr-2">Сотрудников</label>
+                            <select name="category" id="employeesCountSelect" class="form-control">
+                                <option>1-5</option>
+                                <option>6-15</option>
+                                <option>16-30</option>
+                                <option>Больше 30</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="statusSelect" class="mr-2">Статус реализации</label>
+                            <select name="category" id="statusSelect" class="form-control">
+                                <option>Есть идея</option>
+                                <option>Есть наработки</option>
+                                <option>В разработке</option>
+                                <option>На стадии завершения</option>
+                                <option>Готово</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-inline">
+                            <label for="selectMethod" class="mr-2">Способ описания проекта</label>
+                            <select name="category" id="selectMethod" class="form-control">
+                                <option>Выберите способ</option>
+                                <option>Загурзить файл</option>
+                                <option>Текст</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="uploadFile">
+                        <label for="newAvatar">Загурзить файл</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="newAvatar">
+                            <label class="custom-file-label" for="newAvatar">Выберите файл</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="area">
+                        <label for="descriptionArea">Описание</label>
+                        <textarea class="form-control" id="descriptionArea" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="needHelpCheck" onclick="toogleDiv()" checked>
+                        <label class="form-check-label" for="needHelpCheck">Нужны инвестиции</label>
+                    </div>
+                    <div class="form-group" id="inputCost">
+                        <div class="form-inline">
+                            <label for="countInput" class="mr-2">Размер</label>
+                            <input type="text" class="form-control" id="countInput" placeholder="Размер инвестиций">
+                            <select name="currency" id="currencySelect" class="form-control">
+                                <option>$</option>
+                                <option>₽</option>
+                                <option>&#8364</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+                <button type="button" class="btn btn-success">Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -121,7 +228,7 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/StartuperProfile.js"></script>
 <script src="https://use.fontawesome.com/e63e3b96a5.js"></script>
-
 </body>
 </html>
