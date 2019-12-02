@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAQ,8EAAsE;AAM9E,IAAK;EACH,WAAW,EAHF,wBAAwB;;ACFnC,UAAW;EACT,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK",
+"sources": ["Helpers.scss","InvestorPage.scss"],
+"names": [],
+"file": "InvestorPage.css"
+}

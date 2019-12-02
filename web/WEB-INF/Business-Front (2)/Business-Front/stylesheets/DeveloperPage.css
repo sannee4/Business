@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif; }
+
+.cv {
+  margin-top: 100px;
+  background-color: #e1e1e1; }
+
+.card-img {
+  height: 100%; }
+
+.show-git_btn {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .show-git_btn:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.edit-profile_btn {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .edit-profile_btn:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.edit-profile_forms {
+  margin-top: 20px;
+  margin-bottom: 50px; }
+
+.card {
+  border: none; }
+
+.jobs {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+/*# sourceMappingURL=DeveloperPage.css.map */

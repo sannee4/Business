@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.projects {
+  height: 20vh; }
+
+.project-name a {
+  position: relative;
+  text-decoration: none;
+  color: #000; }
+  .project-name a:before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(71, 71, 71, 0.47);
+    transition: 0.2s;
+    transform: scaleX(0); }
+  .project-name a:hover {
+    color: #474747; }
+    .project-name a:hover:before {
+      transform: scaleX(1); }
+
+.section-header {
+  color: #fff;
+  padding-top: 70px; }
+  .section-header h2 {
+    font-size: 2.5em;
+    color: #666; }
+
+.user-info {
+  color: #000;
+  height: 20vh;
+  margin-top: 100px; }
+
+.edit-profile_btn {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .edit-profile_btn:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.add-project {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .add-project:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+#uploadFile, #area {
+  display: none; }
+
+/*# sourceMappingURL=StartuperProfile.css.map */

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif; }
+
+.user-info {
+  color: #000;
+  margin-top: 100px; }
+
+.help-requests {
+  height: 20vh; }
+
+.add-offer {
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .add-offer:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+.competitors {
+  margin-bottom: 60px; }
+
+.competitor, .help-offer {
+  transition: all 0.5s; }
+  .competitor:hover, .help-offer:hover {
+    transform: scale(1.05, 1.05);
+    border-radius: 10px; }
+
+.section-header {
+  color: #fff;
+  padding-top: 70px; }
+  .section-header h2 {
+    font-size: 2.5em;
+    color: #666; }
+  .section-header h3 {
+    color: #666; }
+
+.card-deck {
+  padding-top: 30px; }
+  .card-deck .card {
+    transition: all 0.4s;
+    border: none;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+    .card-deck .card:hover {
+      transform: scale(1.05, 1.05); }
+    .card-deck .card-header {
+      background: url("images/startup1.jpeg") center;
+      background-size: cover;
+      height: 200px; }
+    .card-deck .card-img-top {
+      height: 200px; }
+    .card-deck .card-link {
+      color: #333; }
+      .card-deck .card-link:hover {
+        text-decoration: none;
+        color: #333; }
+
+.accepted-investments {
+  margin-top: 60px; }
+
+.look-all {
+  margin-top: 20px;
+  color: #333;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border: 3px solid #5a6268; }
+  .look-all:hover {
+    background-color: #5a6268;
+    color: #fff; }
+
+#requirements, #investmentSize {
+  display: none; }
+
+/*# sourceMappingURL=StartupDetail.css.map */
