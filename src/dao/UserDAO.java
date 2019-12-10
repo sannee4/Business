@@ -15,7 +15,7 @@ public class UserDAO {
 
     private String SQL_FIND_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
     private String SQL_GET_ALL = "SELECT * FROM users";
-    private String SQL_INSERT = "INSERT INTO users (name, login, password) VALUES (?, ?, ?, ?)";
+    private String SQL_INSERT = "INSERT INTO users (name, login, password, role) VALUES (?, ?, ?, ?)";
     private String SQL_DELETE = "DELETE FROM users WHERE id = ?";
     private String SQL_SELECT = "SELECT * FROM users WHERE login = ? AND password = ?";
     private String SQL_SELECT_LOGIN = "SELECT * FROM users WHERE login = ?";
@@ -31,13 +31,14 @@ public class UserDAO {
         }
     }
 
-    public void insert(String name, String login, String password) {
+    public void insert(String name, String login, String password, Roles role) {
         PreparedStatement st = null;
         try {
             st = connection.prepareStatement(SQL_INSERT);
             st.setString(1, name);
             st.setString(2, login);
             st.setString(3, password);
+            st.setString(4, role.name());
             st.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -51,7 +52,7 @@ public class UserDAO {
             st.setInt(1, id);
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
-                user = new User(id, rs.getString("name"), rs.getString("login"), rs.getString("password"), Roles.valueOf(rs.getString("role")), rs.getInt("account_id"));
+                user = new User(id, rs.getString("name"), rs.getString("login"), rs.getString("password"), Roles.valueOf(rs.getString("role")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -91,7 +92,7 @@ public class UserDAO {
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
                 User user = new User(rs.getInt("id"), rs.getString("name"),
-                        rs.getString("login"), rs.getString("password"), Roles.valueOf(rs.getString("role")), rs.getInt("account_id"));
+                        rs.getString("login"), rs.getString("password"), Roles.valueOf(rs.getString("role")));
                 users.add(user);
             }
         } catch (SQLException e) {
@@ -123,7 +124,7 @@ public class UserDAO {
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
                 user = new User(rs.getInt("id"), rs.getString("name"),
-                        login, rs.getString("password"), Roles.valueOf(rs.getString("role")), rs.getInt("account_id"));
+                        login, rs.getString("password"), Roles.valueOf(rs.getString("role")));
             }
         } catch (SQLException e) {
             e.printStackTrace();

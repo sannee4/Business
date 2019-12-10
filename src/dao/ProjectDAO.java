@@ -90,7 +90,7 @@ public class ProjectDAO {
              st.setInt(1, project_id);
              ResultSet rs = st.executeQuery();
              while (rs.next()){
-                 Developer developer = new Developer(rs.getInt("id"), rs.getString("name"), rs.getString("surname"), rs.getString("country"));
+                 Developer developer = new Developer(rs.getInt("id"), (rs.getInt("developer_id")), rs.getString("name"), rs.getString("surname"), rs.getString("country"));
                  developers.add(developer);
              }
 
@@ -107,7 +107,7 @@ public class ProjectDAO {
             st.setInt(1, project_id);
             ResultSet rs = st.executeQuery();
             while (rs.next()){
-                Investor investor= new Investor(rs.getInt("id"), rs.getString("name"), rs.getString("surname"), rs.getString("country"), rs.getString("budget"));
+                Investor investor= new Investor(rs.getInt("id"), rs.getInt("investor_id"), rs.getString("name"), rs.getString("surname"), rs.getString("country"), rs.getString("budget"));
                 investors.add(investor);
             }
 
@@ -124,7 +124,7 @@ public class ProjectDAO {
             st.setInt(1, project_id);
             ResultSet rs = st.executeQuery();
             while (rs.next()){
-               Startuper startuper= new Startuper(rs.getInt("id"), rs.getString("name"), rs.getString("surname"), rs.getString("country"), rs.getString("experience"));
+               Startuper startuper= new Startuper(rs.getInt("id"), rs.getInt("startuper_id"), rs.getString("name"), rs.getString("surname"), rs.getString("country"), rs.getString("experience"));
                 startupers.add(startuper);
             }
 

@@ -1,5 +1,6 @@
 package filter;
 
+import models.Roles;
 import models.User;
 import services.UserService;
 
@@ -9,6 +10,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebFilter(filterName = "SignInFilter")
 public class SignInFilter implements Filter {
@@ -33,14 +36,22 @@ public class SignInFilter implements Filter {
                 break;
             }
         }
-        if (user == null && (request.getServletPath().equals("/profile")
-                || request.getServletPath().equals("/helpertable")
-                || request.getServletPath().equals("/settings"))) {
+
+        List<String> profilePaths = new ArrayList<String>();
+        profilePaths.add("/profile");
+        profilePaths.add("/inv");
+        profilePaths.add("/dev");
+        profilePaths.add("/st");
+        profilePaths.add("/helpertable");
+        profilePaths.add("/settings");
+
+        if (user == null && (profilePaths.contains(request.getServletPath()))) {
+
             response.sendRedirect("/sign_in");
         } else if (user != null && (request.getServletPath().equals("/sign_in")
                 || request.getServletPath().equals("/sign_up"))) {
-            response.sendRedirect("/projects");
-        } else {
+            response.sendRedirect("/profile");
+        }  else {
             chain.doFilter(req, resp);
         }
     }

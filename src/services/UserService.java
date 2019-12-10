@@ -1,6 +1,7 @@
 package services;
 
 import dao.UserDAO;
+import models.Roles;
 import models.User;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -9,9 +10,8 @@ public class UserService {
 
     private UserDAO userDAO = new UserDAO();
 
-    public void register(String name, String login, String password) throws NoSuchAlgorithmException {
-        System.out.println("in userservice");
-        userDAO.insert(name, login, hash(password));
+    public void register(String name, String login, String password, Roles role) throws NoSuchAlgorithmException {
+        userDAO.insert(name, login, hash(password), role);
     }
 
     public boolean find(String login, String password) throws NoSuchAlgorithmException {

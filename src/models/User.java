@@ -7,15 +7,13 @@ public class User {
     private String login;
     private String password;
     private Roles role;
-    private int account_id;
 
-    public User(int id, String name, String login, String password, Roles role,int account_id) {
+    public User(int id, String name, String login, String password, Roles role) {
         this.id = id;
         this.name = name;
         this.login = login;
         this.password = password;
         this.role = role;
-        this.account_id = account_id;
     }
 
     public int getId() {
@@ -32,14 +30,6 @@ public class User {
 
     public void setRole(Roles role) {
         this.role = role;
-    }
-
-    public int getAccount_id() {
-        return account_id;
-    }
-
-    public void setAccount_id(int account_id) {
-        this.account_id = account_id;
     }
 
     public String getLogin() {

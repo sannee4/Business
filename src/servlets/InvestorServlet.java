@@ -2,6 +2,7 @@ package servlets;
 
 import helpers.Helper;
 import models.Investor;
+import models.User;
 import services.PeopleService;
 
 import javax.servlet.ServletException;
@@ -21,11 +22,13 @@ public class InvestorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Investor> investors = peopleService.getAllInvestors();
-        System.out.println(investors.size());
+        User user = (User) req.getSession().getAttribute("user");
         Map<String, Object> root = new HashMap<>();
-        root.put("investors", investors);
-        Helper.render(req, resp, "investors.ftl", root);
+        Investor investor = peopleService.getInvestor(user.getId());
+
+        root.put("user", user);
+        root.put("investor", investor);
+        Helper.render(req, resp, "investorProfile.ftl", root);
     }
 
     @Override

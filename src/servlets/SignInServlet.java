@@ -39,7 +39,7 @@ public class SignInServlet extends HttpServlet {
                     cookie.setMaxAge(60 * 60 * 24 * 14);
                     response.addCookie(cookie);
                 }
-                response.sendRedirect("/projects");
+                response.sendRedirect("/profile");
             } else {
                 response.sendRedirect("/sign_up");
             }

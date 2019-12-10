@@ -28,7 +28,7 @@
                                                                             aria-hidden="true"></i></span>
                         </div>
                         <input type="text" class="form-control" placeholder="Имя" aria-label="name"
-                               aria-describedby="basic-addon1">
+                               aria-describedby="basic-addon1" name="name">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -36,14 +36,7 @@
                                                                             aria-hidden="true"></i></span>
                         </div>
                         <input type="text" class="form-control" placeholder="Фамилия" aria-label="surname"
-                               aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon3"><i class="fa fa-user"
-                                                                            aria-hidden="true"></i></span>
-                        </div>
-                        <input type="number" class="form-control" placeholder="Телефон" aria-label="phone"
+                               name="surname"
                                aria-describedby="basic-addon1">
                     </div>
 
@@ -51,7 +44,7 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Я </label>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
+                        <select class="custom-select" id="inputGroupSelect01" name="role">
                             <option selected value="1">Стартапер</option>
                             <option value="2">Инвестор</option>
                             <option value="3">Разработчик</option>
@@ -64,6 +57,16 @@
                         </div>
                         <input type="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp"
                                aria-label="Email"
+                               name="email"
+                               aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-globe"
+                                                                            aria-hidden="true"></i></span>
+                        </div>
+                        <input class="form-control" id="email" placeholder="Country"
+                               name="country"
                                aria-describedby="basic-addon1">
                     </div>
                     <div id="mailErr" style="display: none;padding: 5px;  color:red;"> Неправильный формат почты</div>
@@ -86,7 +89,6 @@
                     </div>
                     <span id="passwordError"></span>
                     <button class="btn btn-lg signup-btn" id="register" type="submit">Регистрация</button>
-                    <input type="submit" class="btn btn-lg signup-btn" value="Зарегистрироваться">
                     <a href="#signin-modal" data-toggle="modal">У меня уже есть профиль</a>
                 </form>
             </form>

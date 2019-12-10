@@ -11,11 +11,14 @@
     </filter>
     <filter-mapping>
         <filter-name>filter</filter-name>
-        <url-pattern>/settings</url-pattern>
-        <url-pattern>/profile</url-pattern>
-        <url-pattern>/helpertable</url-pattern>
-        <url-pattern>/sign_in</url-pattern>
         <url-pattern>/sign_up</url-pattern>
+        <url-pattern>/sign_in</url-pattern>
+        <url-pattern>/profile</url-pattern>
+        <url-pattern>/settings</url-pattern>
+        <url-pattern>/helpertable</url-pattern>
+        <url-pattern>/st</url-pattern>
+        <url-pattern>/inv</url-pattern>
+        <url-pattern>/dev</url-pattern>
     </filter-mapping>
 
     <servlet>
@@ -43,5 +46,115 @@
         <servlet-name>projects</servlet-name>
         <url-pattern>/projects</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>project</servlet-name>
+        <servlet-class>servlets.ProjectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>project</servlet-name>
+        <url-pattern>/project</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>profile</servlet-name>
+        <servlet-class>servlets.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>investor</servlet-name>
+        <servlet-class>servlets.InvestorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>investor</servlet-name>
+        <url-pattern>/inv</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>developer</servlet-name>
+        <servlet-class>servlets.DeveloperServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>developer</servlet-name>
+        <url-pattern>/dev</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>startuper</servlet-name>
+        <servlet-class>servlets.StartuperServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>startuper</servlet-name>
+        <url-pattern>/st</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>contest</servlet-name>
+        <servlet-class>servlets.ContestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contest</servlet-name>
+        <url-pattern>/contest</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>servlets.SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>top</servlet-name>
+        <servlet-class>servlets.TopServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>top</servlet-name>
+        <url-pattern>/top</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>creation</servlet-name>
+        <servlet-class>servlets.CreationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>creation</servlet-name>
+        <url-pattern>/creation</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>servlets.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteProject</servlet-name>
+        <servlet-class>servlets.DeleteProjectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteProject</servlet-name>
+        <url-pattern>/deleteProject</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>

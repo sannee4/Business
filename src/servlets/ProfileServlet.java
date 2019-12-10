@@ -6,6 +6,7 @@ import models.User;
 import services.HelperTableService;
 import services.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet( name="ProfileServlet")
+@WebServlet(name = "ProfileServlet")
 public class ProfileServlet extends HttpServlet {
     UserService userService;
     HelperTableService helperTableService;
@@ -25,12 +26,24 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
-        List<HelperTable>  helperTables = helperTableService.getAllById(user.getId());
-        Map<String, Object> root = new HashMap<>();
-        root.put("user", user);
-        root.put("helpertables", helperTables);
-        Helper.render(req, resp, "profile.ftl", root);
 
+
+        if (user.getRole().name().equals("STARTUPER")) {
+//            List<HelperTable> helperTables = helperTableService.getAllById(user.getId());
+//            Map<String, Object> root = new HashMap<>();
+//            root.put("startuper", user);
+//            root.put("helpertables", helperTables);
+//            Helper.render(req, resp, "startuperProfile.ftl", root);
+
+            resp.sendRedirect("/st");
+        } else if (user.getRole().name().equals("INVESTOR")) {
+            Map<String, Object> root = new HashMap<>();
+            root.put("investor", user);
+
+            resp.sendRedirect("/inv");
+        } else {
+            resp.sendRedirect("/dev");
+        }
     }
 
     @Override

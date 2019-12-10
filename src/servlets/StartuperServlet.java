@@ -2,6 +2,7 @@ package servlets;
 
 import helpers.Helper;
 import models.Startuper;
+import models.User;
 import services.PeopleService;
 
 import javax.servlet.ServletException;
@@ -25,10 +26,14 @@ public class StartuperServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Startuper> startupers = peopleService.getAllStartupers();
+        User user = (User)req.getSession().getAttribute("user");
         Map<String,Object> root = new HashMap<>();
-        root.put("startupers",startupers);
-        Helper.render(req, resp, "startuper.ftl", root);
+        Startuper startuper = peopleService.getStartuper(user.getId());
+        System.out.println(startuper.getCountry());
+
+        root.put("user", user);
+        root.put("startuper",startuper);
+        Helper.render(req, resp, "startuperProfile.ftl", root);
     }
 
     @Override
