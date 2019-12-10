@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS developers(
     name VARCHAR(128),
     surname VARCHAR(128),
     country VARCHAR(128),
-    user_id INT FOREIGN KEY references users(id)
+    developer_id INT,
+    FOREIGN KEY (developer_id) references users(id)
 );
 
 CREATE TABLE IF NOT EXISTS developers(
@@ -21,7 +22,8 @@ CREATE TABLE IF NOT EXISTS developers(
     name VARCHAR(128),
     surname VARCHAR(128),
     country VARCHAR(128),
-    developer_id INT FOREIGN KEY references users(id)
+    developer_id INT,
+    FOREIGN KEY(developer_id) references users(id)
 );
 
 CREATE TABLE IF NOT EXISTS startupers(
@@ -30,7 +32,8 @@ CREATE TABLE IF NOT EXISTS startupers(
     surname VARCHAR(128),
     country VARCHAR(128),
     experience VARCHAR(128),
-    startuper_id INT FOREIGN KEY references users(id)
+    startuper_id INT,
+    FOREIGN KEY(startuper_id) references users(id)
 );
 
 CREATE TABLE IF NOT EXISTS investors(
@@ -39,7 +42,8 @@ CREATE TABLE IF NOT EXISTS investors(
     surname VARCHAR(128),
     country VARCHAR(128),
     budget VARCHAR(128),
-    investor_id INT FOREIGN KEY references users(id)
+    investor_id INT,
+    FOREIGN KEY(investor_id) references users(id)
 );
 
 
@@ -48,13 +52,15 @@ CREATE TABLE IF NOT EXISTS projects(
     name VARCHAR(128),
     data VARCHAR(128),
     describe VARCHAR(128),
-    investor_id INT FOREIGN KEY references users(id)
+    investor_id INT,
+    FOREIGN KEY(investor_id) references users(id)
 );
 
 CREATE TABLE IF NOT EXISTS helperTables(
     id SERIAL PRIMARY KEY,
     name VARCHAR(128),
-    user_id INT FOREIGN KEY references users(id)
+    user_id INT,
+    FOREIGN KEY(user_id) references users(id)
 );
 
 CREATE TABLE IF NOT EXISTS comments(
@@ -62,7 +68,8 @@ CREATE TABLE IF NOT EXISTS comments(
     user VARCHAR(128),
     text VARCHAR(128),
     date VARCHAR(128),
-    project_id INT FOREIGN KEY references projects(id)
+    project_id INT,
+    FOREIGN KEY(project_id) references projects(id)
 );
 CREATE TABLE IF NOT EXISTS contests(
     id SERIAL PRIMARY KEY,
@@ -76,5 +83,7 @@ CREATE TABLE IF NOT EXISTS requests(
     id SERIAL PRIMARY KEY,
     data VARCHAR(128),
     participant VARCHAR(128),
-    contest_name VARCHAR FOREIGN KEY references connects(name)
+    contest_name VARCHAR,
+    contest_id INT,
+    FOREIGN KEY(contest_id) references contests(id)
 );
