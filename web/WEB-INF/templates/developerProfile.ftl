@@ -15,7 +15,41 @@
 
 </head>
 <body>
-<@header/>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Business</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-2">
+            <li class="nav-item">
+                <a href="#jobs">
+                    <button class="btn nav-button">Вакансии</button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#startups">
+                    <button class="btn nav-button">Стартапы</button>
+                </a>
+            </li>
+            <li class="nav-item ">
+                <div class="btn-group">
+                    <button type="button" class="btn dropdown-toggle nav-button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        ${user.name} ${developer.surname}
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">Профиль</button>
+                        <button class="dropdown-item" type="button">Добавить (стартап/инвестиционный проект/резюме)
+                        </button>
+                        <button class="dropdown-item" type="button">Выход</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="card mb-3 cv" style="max-width: 640px;">
         <div class="row no-gutters">

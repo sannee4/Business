@@ -24,7 +24,10 @@ public class InvestorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
         Map<String, Object> root = new HashMap<>();
+
         Investor investor = peopleService.getInvestor(user.getId());
+
+        System.out.println(investor.getId() + "- (as investor) name");
 
         root.put("user", user);
         root.put("investor", investor);

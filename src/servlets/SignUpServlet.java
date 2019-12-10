@@ -46,6 +46,12 @@ public class SignUpServlet extends HttpServlet {
                 Roles.DEVELOPER
         };
 
+        System.out.println(roleNumber);
+
+        if (roleNumber == 0) {
+            roleNumber = 1;
+        }
+
         Roles role = roles[roleNumber - 1];
 
         try {
@@ -61,7 +67,8 @@ public class SignUpServlet extends HttpServlet {
                 case "INVESTOR":
                     peopleService.createInvestor(user.getId(), name, surname, country, budget);
                     break;
-                case "STARTUPER":
+                default:
+                    System.out.println("STARTUPER HULE");
                     peopleService.createStaruper(user.getId(), name, surname, country, experience);
                     break;
             }

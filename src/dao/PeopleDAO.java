@@ -65,6 +65,7 @@ public class PeopleDAO {
             st.setString(3, surname);
             st.setString(4, country);
             st.setString(5, budget);
+            st.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -79,7 +80,7 @@ public class PeopleDAO {
             st.setString(3, surname);
             st.setString(4, country);
             st.setString(5, experience);
-
+            st.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -117,6 +118,7 @@ public class PeopleDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return developer;
     }
 
@@ -134,6 +136,7 @@ public class PeopleDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return investor;
     }
 

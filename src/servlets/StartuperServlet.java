@@ -29,7 +29,6 @@ public class StartuperServlet extends HttpServlet {
         User user = (User)req.getSession().getAttribute("user");
         Map<String,Object> root = new HashMap<>();
         Startuper startuper = peopleService.getStartuper(user.getId());
-        System.out.println(startuper.getCountry());
 
         root.put("user", user);
         root.put("startuper",startuper);

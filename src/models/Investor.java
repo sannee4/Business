@@ -14,6 +14,11 @@ public class Investor {
         this.name = name;
         this.surname = surname;
         this.country = country;
+
+        if (budget == null) {
+            budget = "0";
+        }
+
         this.budget = budget;
     }
 

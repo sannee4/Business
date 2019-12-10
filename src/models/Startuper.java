@@ -14,6 +14,11 @@ public class Startuper {
         this.name = name;
         this.surname = surname;
         this.country = country;
+
+        if (experience == null) {
+            experience = "No experience given";
+        }
+
         this.experience = experience;
     }
 

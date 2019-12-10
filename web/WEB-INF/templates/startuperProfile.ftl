@@ -7,30 +7,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="../../front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../../front/css/style.css" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('.delete').click(function () {
-                var name = $(this).attr('name');
-                $.ajax({
-                    type: "post",
-                    url: "/delete",
-                    data: {
-                        "helpertable_id": name
-                    },
-                    success: function () {
-                        $('#' + name).fadeOut();
-                    }
-                });
-            });
-        });
+        // $(document).ready(function () {
+        //     $('.delete').click(function () {
+        //         var name = $(this).attr('name');
+        //         $.ajax({
+        //             type: "post",
+        //             url: "/delete",
+        //             data: {
+        //                 "helpertable_id": name
+        //             },
+        //             success: function () {
+        //                 $('#' + name).fadeOut();
+        //             }
+        //         });
+        //     });
+        // });
     </script>
     <title>Profile</title>
 </head>
 <body>
-<@header/>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">Business</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -53,7 +53,7 @@
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle nav-button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                        Имя Фамилия
+                        ${user.name} ${startuper.surname}
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
                         <button class="dropdown-item" type="button">Профиль</button>
@@ -71,7 +71,7 @@
 
     <div class="user-info container">
         <h2 id="username"></b>${user.name}</h2>
-        <h4></b>${user.country}</h4>
+        <h4></b>${startuper.country}</h4>
         <div class="info">
             <h5>79991553468</h5>
             <h5>mail@mail.ru</h5>
@@ -84,7 +84,7 @@
             <div class="row section-header">
                 <div class="col-sm-4">
                     <h2 class="h2">Мои проекты</h2>
-                    <#list projects as p></#list>
+<#--                    <#list projects as p></#list>-->
                 </div>
                 <div class="ml-auto">
                     <button class="btn add-project" type="button" data-toggle="modal" data-target="#newProject">Добавить
