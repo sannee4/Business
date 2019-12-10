@@ -51,7 +51,6 @@
 
 <div class="container">
 
-    <!--    Информация о юзкре-->
     <div class="user-info container">
         <h2>${user.name} ${investor.surname}</h2>
         <h4>${investor.country}</h4>
@@ -62,7 +61,6 @@
         <button class="btn btn-sm edit-profile_btn">Редактровать профиль</button>
     </div>
 
-    <!--Инвестиционные проекты-->
     <div class="my-contests">
         <div class="container">
             <div class="row section-header">
