@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 public class ConnectHelper {
 
     private static Connection conn;
@@ -16,6 +15,7 @@ public class ConnectHelper {
                     "postgres",
                     "Milkovskii69"
             );
+
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }

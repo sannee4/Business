@@ -19,9 +19,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="org.freemarker:freemarker:2.3.22" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="library" name="postgresql-42.2.9" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="org.postgresql:postgresql:42.2.9" level="project" />
     <orderEntry type="library" name="org.ow2.chameleon.json:json-service-json.org:0.4.0" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
+    <orderEntry type="library" name="org.freemarker:freemarker:2.3.22" level="application" />
   </component>
 </module>
